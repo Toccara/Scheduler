@@ -36,7 +36,7 @@ $(document).ready(function () {
 		});
 	};
 
-	//Click event to save user input in local storage
+	//FUnction to save to local storage
 	$(".saveBtn").click(function () {
 		var scheduleInputs = $(this).siblings(".event").val();
 		var inputsLocation = $(this).siblings(".event").attr("id");
