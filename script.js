@@ -12,12 +12,14 @@ $(document).ready(function () {
 
 	//Color coding to indicate whether it is in the past, present, or future
 	function colorSchedule() {
+		var currentHour = moment().hours();
+
 		$("input").each(function () {
 			var rowHour = $(this).attr("id");
 			var rowNumber = parseInt(rowHour);
-			if (blockHour < currentHour) {
+			if (rowNumber < currentHour) {
 				$(this).addClass("past");
-			} else if (blockHour === currentHour) {
+			} else if (rowNumber === currentHour) {
 				$(this).removeClass("past");
 				$(this).addClass("present");
 			} else {
